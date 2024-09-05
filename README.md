@@ -15,15 +15,18 @@ source .bash_profile
 Node Installation
 ```
 
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf bcna
 git clone https://github.com/BitCannaGlobal/bcna
 cd bcna
 git checkout v3.1.0
+```
 
-# Build binary
+**Build binary**
+```
 make install
-
+```
 # Set node CLI configuration
 bcnad config chain-id bitcanna-dev-1
 bcnad config keyring-backend test
