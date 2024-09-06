@@ -27,10 +27,13 @@ git checkout v3.1.0
 ```
 make install
 ```
-# Set node CLI configuration
+**Set node CLI configuration**
+
+```
 bcnad config chain-id bitcanna-dev-1
 bcnad config keyring-backend test
 bcnad config node tcp://localhost:13057
+```
 
 # Initialize the node
 bcnad init "Your Node Name" --chain-id bitcanna-dev-1
