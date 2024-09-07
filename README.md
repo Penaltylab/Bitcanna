@@ -35,8 +35,10 @@ bcnad config keyring-backend test
 bcnad config node tcp://localhost:13057
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 bcnad init "Your Node Name" --chain-id bitcanna-dev-1
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/bitcanna-testnet/genesis.json > $HOME/.bcna/config/genesis.json
