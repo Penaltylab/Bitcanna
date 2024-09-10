@@ -51,8 +51,10 @@ curl -L https://snapshots-testnet.nodejumper.io/bitcanna-testnet/addrbook.json >
 sed -i -e 's|^seeds *=.*|seeds = "471341f9befeab582e845d5e9987b7a4889c202f@144.91.89.66:26656,496ac0ba20188f70f41e0a814dfd4d9a617338f8@bcnadev-seed.ibs.team:16656,80ee9ed689bfb329cf21b94aa12978e073226db4@212.227.151.143:26656,20ca909b49106aacbf516ba28fa8a2409f825a82@212.227.151.106:26656"|' $HOME/.bcna/config/config.toml
 ```
 
-# Set minimum gas price
+**Set minimum gas price**
+```
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001ubcna"|' $HOME/.bcna/config/app.toml
+```
 
 # Set pruning
 sed -i \
