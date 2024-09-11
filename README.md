@@ -56,12 +56,14 @@ sed -i -e 's|^seeds *=.*|seeds = "471341f9befeab582e845d5e9987b7a4889c202f@144.9
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.001ubcna"|' $HOME/.bcna/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.bcna/config/app.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:13017%; s%:8080%:13080%; s%:9090%:13090%; s%:9091%:13091%; s%:8545%:13045%; s%:8546%:13046%; s%:6065%:13065%" $HOME/.bcna/config/app.toml
