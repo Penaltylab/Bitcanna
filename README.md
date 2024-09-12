@@ -65,9 +65,11 @@ sed -i \
   $HOME/.bcna/config/app.toml
 ```
 
-# Change ports
+**Change ports**
+```
 sed -i -e "s%:1317%:13017%; s%:8080%:13080%; s%:9090%:13090%; s%:9091%:13091%; s%:8545%:13045%; s%:8546%:13046%; s%:6065%:13065%" $HOME/.bcna/config/app.toml
 sed -i -e "s%:26658%:13058%; s%:26657%:13057%; s%:6060%:13060%; s%:26656%:13056%; s%:26660%:13061%" $HOME/.bcna/config/config.toml
+```
 
 # Download latest chain data snapshot
 curl "https://snapshots-testnet.nodejumper.io/bitcanna-testnet/bitcanna-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.bcna"
