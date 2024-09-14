@@ -76,7 +76,8 @@ sed -i -e "s%:26658%:13058%; s%:26657%:13057%; s%:6060%:13060%; s%:26656%:13056%
 curl "https://snapshots-testnet.nodejumper.io/bitcanna-testnet/bitcanna-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.bcna"
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/bcnad.service > /dev/null << EOF
 [Unit]
 Description=Bitcanna node service
@@ -92,6 +93,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable bcnad.service
+```
 
 # Start the service and check the logs
 sudo systemctl start bcnad.service
